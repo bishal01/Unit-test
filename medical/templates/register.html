@@ -4,6 +4,8 @@
     <div class="content-section">
         <form method="POST">
             {% csrf_token %}
+
+            <h1>This Is the Signup Page For Patient</h1>
             <fieldset class="form-group">
 
                 {{ form|crispy }}
@@ -16,6 +18,9 @@
             <small class="text-muted">
                 Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
             </small>
+
+                 <small>Want to register as a doctor <a href="{% url 'doctor_register' %}">click here</a> </small>
+
         </div>
     </div>
 {% endblock content %}

@@ -3,6 +3,8 @@
 {% block content %}
     <div class="content-section">
         <form method="POST">
+
+            <h1>This is the signup for doctor</h1>
             {% csrf_token %}
             <fieldset class="form-group">
 
@@ -15,7 +17,9 @@
         <div class="border-top pt-3">
             <small class="text-muted">
                 Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
+
             </small>
+            <small>Want to register as a patient <a href="{% url 'register' %}">click here</a> </small>
         </div>
     </div>
 {% endblock content %}
